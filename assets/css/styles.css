@@ -1,0 +1,137 @@
+body {
+    background: #43cea2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #185a9d, #43cea2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#container {
+    margin: 100px auto;
+    width: 700px;
+    background: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    border-radius: 0 10px 10px 0;
+}
+
+h1 {
+    border-radius: 0 10px 0 0;
+    background: rgba(53, 117, 201, 0.904);
+    color: #f7f7f7;
+    padding: 5px 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+}
+
+.plus-sign {
+    float: right;
+}
+
+.todo-input {
+    display: flex;
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: stretch;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input {
+    background-color: #f7f7f7;
+    font-size: 18px;
+    border-width: 0.5px;
+    border-color: rgb(206, 206, 206);
+    border-style: solid;
+    padding: 20px;
+    color: rgb(77, 76, 76);
+}
+
+input[type="text"]:focus, input[type="time"]:focus {
+    background: white;
+    outline: none;
+    border: 3px solid rgba(53, 117, 201, 0.904);
+}
+
+.new-todo {
+    width: 70%;
+}
+
+.new-date {
+    width: 30%;
+    text-align: center;
+}
+
+.error, .error::placeholder {
+    background-color: red;
+    color: yellow;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background: white;
+    height: 40px;
+    line-height: 40px;
+    color: rgb(77, 76, 76);
+    padding-right: 20px;
+}
+
+li:nth-of-type(2n) {
+    background: #f7f7f7;
+}
+
+li:last-of-type {
+    border-radius: 0 0 10px 0;
+    ;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.delete {
+    background: rgb(189, 42, 42);
+    color: rgb(224, 221, 221);
+    display: inline-block;
+    width: 0;
+    text-align: center;
+    margin-right: 20px;
+    opacity: 0;
+    transition: 300ms linear;
+}
+
+li:hover .delete {
+    width: 10%;
+    opacity: 1.0;
+}
+
+.todo-date {
+    float: right;
+    width: 30%;
+    text-align: center;
+}
+
+.hide {
+    display: none !important;
+}
+
+@media(max-width: 780px) {
+    #container {
+        width: 90%;
+    }
+}
+
+@media(max-width: 350px) {
+    #container {
+        width: 300px;
+    }
+}
